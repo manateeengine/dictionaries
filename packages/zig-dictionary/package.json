@@ -1,0 +1,6 @@
+{
+  "name": "@manateeengine/zig-dictionary",
+  "module": "index.ts",
+  "type": "module",
+  "private": true
+}
