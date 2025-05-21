@@ -1,0 +1,3 @@
+{
+  "import": ["@cspell/dictionary-zig/cspell-ext.json"]
+}
