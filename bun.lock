@@ -3,18 +3,28 @@
   "workspaces": {
     "": {
       "name": "dictionaries",
-      "dependencies": {
-        "turbo": "^2.5.3",
-      },
       "devDependencies": {
         "@types/bun": "latest",
+        "turbo": "^2.5.3",
       },
-      "peerDependencies": {
-        "typescript": "^5",
+    },
+    "packages/config": {
+      "name": "@manateeengine/config",
+      "version": "0.1.0",
+    },
+    "packages/zig-dictionary": {
+      "name": "@manateeengine/zig-dictionary",
+      "version": "0.1.0",
+      "devDependencies": {
+        "@manateeengine/config": "workspace:*",
       },
     },
   },
   "packages": {
+    "@manateeengine/config": ["@manateeengine/config@workspace:packages/config"],
+
+    "@manateeengine/zig-dictionary": ["@manateeengine/zig-dictionary@workspace:packages/zig-dictionary"],
+
     "@types/bun": ["@types/bun@1.2.13", "", { "dependencies": { "bun-types": "1.2.13" } }, "sha512-u6vXep/i9VBxoJl3GjZsl/BFIsvML8DfVDO0RYLEwtSZSp981kEO1V5NwRcO1CPJ7AmvpbnDCiMKo3JvbDEjAg=="],
 
     "@types/node": ["@types/node@22.15.18", "", { "dependencies": { "undici-types": "~6.21.0" } }, "sha512-v1DKRfUdyW+jJhZNEI1PYy29S2YRxMV5AOO/x/SjKmW0acCIOqmbj6Haf9eHAhsPmrhlHSxEhv/1WszcLWV4cg=="],
@@ -34,8 +44,6 @@
     "turbo-windows-64": ["turbo-windows-64@2.5.3", "", { "os": "win32", "cpu": "x64" }, "sha512-arLQYohuHtIEKkmQSCU9vtrKUg+/1TTstWB9VYRSsz+khvg81eX6LYHtXJfH/dK7Ho6ck+JaEh5G+QrE1jEmCQ=="],
 
     "turbo-windows-arm64": ["turbo-windows-arm64@2.5.3", "", { "os": "win32", "cpu": "arm64" }, "sha512-3JPn66HAynJ0gtr6H+hjY4VHpu1RPKcEwGATvGUTmLmYSYBQieVlnGDRMMoYN066YfyPqnNGCfhYbXfH92Cm0g=="],
-
-    "typescript": ["typescript@5.8.3", "", { "bin": { "tsc": "bin/tsc", "tsserver": "bin/tsserver" } }, "sha512-p1diW6TqL9L07nNxvRMM7hMMw4c5XOo/1ibL4aAIGmSAt9slTE1Xgw5KWuof2uTOvCg9BY7ZRi+GaF+7sfgPeQ=="],
 
     "undici-types": ["undici-types@6.21.0", "", {}, "sha512-iwDZqg0QAGrg9Rav5H4n0M64c3mkR59cJ6wQp+7C4nI0gsmExaedaYLNO44eT4AtBBwjbTiGPMlt2Md0T9H9JQ=="],
   }

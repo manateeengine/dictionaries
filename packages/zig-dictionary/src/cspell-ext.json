@@ -1,0 +1,28 @@
+{
+  "id": "zig",
+  "version": "0.2",
+  "name": "Zig",
+  "description": "Zig dictionary.",
+  "readonly": true,
+  "dictionaryDefinitions": [
+    {
+      "name": "zig",
+      "path": "./zig.txt",
+      "description": "Zig dictionary."
+    }
+  ],
+  "dictionaries": [],
+  "languageSettings": [
+    {
+      "languageId": "zig,zon",
+      "locale": "*",
+      "includeRegExpList": [],
+      "ignoreRegExpList": [],
+      "patterns": [],
+      "dictionaries": [
+        "zig"
+      ],
+      "dictionaryDefinitions": []
+    }
+  ]
+}

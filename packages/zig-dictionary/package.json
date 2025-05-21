@@ -1,6 +1,23 @@
 {
   "name": "@manateeengine/zig-dictionary",
-  "module": "index.ts",
-  "type": "module",
-  "private": true
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "files": [
+    "dist/cspell-ext.json",
+    "dist/dictionary.txt"
+  ],
+  "exports": {
+    ".": "./dist/cspell-ext.json",
+    "./cspell": "./dist/cspell-ext.json",
+    "./cspell-ext.json": "./dist/cspell-ext.json"
+  },
+  "scripts": {
+    "build": "bun run build:copy-settings && bun run build:generate-dictionary",
+    "build:copy-settings": "rm -rf ./dist && mkdir -p ./dist && cp ./src/cspell-ext.json ./dist/cspell-ext.json",
+    "build:generate-dictionary": "bun ./scripts/build.ts"
+  },
+  "devDependencies": {
+    "@manateeengine/config": "workspace:*"
+  }
 }
