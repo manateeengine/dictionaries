@@ -1,6 +1,7 @@
 {
   "name": "@manateeengine/dictionary-zig",
-  "version": "0.1.0",
+  "description": "Zig dictionary for cSpell",
+	"version": "0.1.0",
   "private": true,
   "license": "MIT",
   "files": [
