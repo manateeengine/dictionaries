@@ -1,0 +1,4 @@
+{
+  "extends": "@manateeengine/config/tsconfig.json",
+  "include": ["scripts", "src"]
+}

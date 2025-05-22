@@ -1,0 +1,20 @@
+{
+  "name": "@manateeengine/dictionaries",
+  "devDependencies": {
+    "@types/bun": "latest",
+    "turbo": "^2.5.3"
+  },
+  "engines": {
+    "bun": ">=1.2.5"
+  },
+  "packageManager": "bun@1.2.5",
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "typecheck": "turbo run typecheck"
+  },
+  "type": "module",
+  "workspaces": [
+    "packages/*"
+  ]
+}

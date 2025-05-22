@@ -1,0 +1,70 @@
+{
+	"name": "code-spell-checker-zig",
+	"description": "Zig dictionary extension for VS Code",
+	"version": "0.2.1",
+	"displayName": "Zig - Code Spell Checker",
+	"private": true,
+	"publisher": "manateeengine",
+	"license": "MIT",
+	"type": "commonjs",
+	"engines": {
+		"vscode": "^1.67.0"
+	},
+  "files": [
+    "dist/extension.js",
+    "cspell-ext.json"
+  ],
+	"sponsor": {
+		"url": "https://github.com/sponsors/manateeengine"
+	},
+	"extensionKind": [
+		"workspace"
+	],
+	"categories": [
+		"Linters",
+		"Other"
+	],
+	"keywords": [
+		"Zig",
+		"VS Code Extension",
+		"Spelling Checker",
+		"dictionary",
+		"spelling"
+	],
+	"activationEvents": [
+		"onStartupFinished"
+	],
+	"qna": "marketplace",
+	"main": "./dist/extension.js",
+	"capabilities": {
+		"virtualWorkspaces": true,
+		"untrustedWorkspaces": {
+			"supported": true
+		}
+	},
+	"contributes": {},
+	"extensionDependencies": [
+		"streetsidesoftware.code-spell-checker"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/manateeengine/dictionaries"
+	},
+	"bugs": {
+		"url": "https://github.com/streetsidesoftware/dictionaries/issues"
+	},
+	"scripts": {
+    "build": "bunx --bun unbuild",
+    "package-extension": "bun ./scripts/copyTempExtension.ts && bun ./scripts/packageExtension.ts",
+    "publish-extension": "bun ./scripts/copyTempExtension.ts && bun ./scripts/publishExtension.ts",
+		"test": "echo \"TODO: Write Tests\""
+	},
+	"dependencies": {
+		"@manateeengine/dictionary-zig": "workspace:0.1.1"
+	},
+	"devDependencies": {
+		"@manateeengine/config": "workspace:*",
+		"unbuild": "^3.5.0",
+		"vscode": "^1.1.37"
+	}
+}

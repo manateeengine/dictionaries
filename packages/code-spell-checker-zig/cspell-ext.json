@@ -1,0 +1,3 @@
+{
+  "import": ["@manateeengine/dictionary-zig/cspell-ext.json"]
+}
