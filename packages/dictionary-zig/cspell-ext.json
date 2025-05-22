@@ -7,7 +7,7 @@
   "dictionaryDefinitions": [
     {
       "name": "zig",
-      "path": "./zig.txt",
+      "path": "./dist/dictionary.txt",
       "description": "Zig dictionary."
     }
   ],
